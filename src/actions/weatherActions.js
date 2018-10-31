@@ -10,8 +10,7 @@ export function getWeather(weather) {
 export function getWeatherFromAPI() {
     return (dispatch) => {
         Weathers.get_weather().then((response) => {
-            console.log(response);
-
+        
             const filterApi = response.data.list.filter((elem, pos, arr) => elem.dt_txt.includes('15:00:00'))
 
             filterApi.map((clima, index) => {
@@ -22,7 +21,7 @@ export function getWeatherFromAPI() {
                     day: clima.dt_txt,
                     description: clima.weather[0].description,
                     type: clima.weather[0].main,
-                    icon: clima.weather[0].id
+                    icon: clima.weather[0].icon
                 }
                 dispatch({ type: types.GET_API, weather })
             })

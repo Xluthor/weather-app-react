@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
-export const Image = styled.i`
+export const Image = styled.img`
 font-size: 40px;
 `

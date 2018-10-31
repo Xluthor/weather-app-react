@@ -9,7 +9,7 @@ class Icon extends React.Component{
 
     render(){
         return(
-            <p><Image className={`wi-owm-${this.props.dataW.icon}`} /></p>
+            <Image src={`http://openweathermap.org/img/w/${this.props.dataW.icon}.png`} />
         )
     }
 }
